@@ -5,3 +5,24 @@ O(logn) = we put in effort logarithmically, therefore lesser
 O(n) =  we go through each and every entry
 O(n^2) = commonly in loop within loop, and wasteful memory wise, spends exponentially double
 O(2^n) = doubles the effort/memory used exponentially every timer
+
+Data structure = is how data is organized inside our systems/computers/phones
+since date or raw information is in an enormous amount a proper organization is needed for efficiency
+Data structure is a way of organizing data so that specific operations like insert/delete/etc are performed in the most efficient manner in terms of space and time allocation.
+-> types= linear and non linear
+LINEAR DATA STRUCTURE:
+    1)array/list
+    2)linked list
+    3)stack
+    4)queue
+
+    ARRAY:
+        possible operations= read, add, remove
+        python has list which behaves like array but unlike array its dynamically allocated
+        Array's indexes start from 0
+            Access operation at any position cost O(1)
+            Insertion/deletion at end is O(1)
+            Insertion/deletion in the middle is O(n)
+            Slicing is performed over a range of elements and is O(k) such that k<n 
+        
+    
