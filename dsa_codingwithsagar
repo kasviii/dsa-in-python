@@ -1,0 +1,7 @@
+Big O notation:
+Each notation listed here has a coded example in the script: 
+O(1) = memory/effort required is consistently the same
+O(logn) = we put in effort logarithmically, therefore lesser
+O(n) =  we go through each and every entry
+O(n^2) = commonly in loop within loop, and wasteful memory wise, spends exponentially double
+O(2^n) = doubles the effort/memory used exponentially every timer

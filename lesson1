@@ -2,3 +2,21 @@ Q1)Alice has some cards with numbers written on them. She arrangesthe cards in d
 table. She challenges Bob to pick out the card containing a given number by turning over as few cards as possible. Write a function to help Bob
 locate the card
 -> we use binary search
+solution steps: state question in easy terms to define goal personally
+                identify input output formats
+                come up with example test cases to cover edge cases
+easy term translatioon of the question: find position of a given number in a list of numbers arranged in decreasing order. we also need to 
+                                        minimize the number of times we access elements from the list
+input is cards, which is a sorted list of numbers, and query which is the number whose array position is to be determined
+output is position of the query
+different cases:number query occurs in middles of list
+                query is first element
+                its last element
+                list doesn't have the query element
+                list has multiple of the query element
+                query could be negative int
+
+    theres a basic solution to begin with, which fails for an empty list 
+    in script i have listed the different test cases appended in a dictionary
+
+         
