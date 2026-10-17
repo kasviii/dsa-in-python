@@ -24,5 +24,22 @@ LINEAR DATA STRUCTURE:
             Insertion/deletion at end is O(1)
             Insertion/deletion in the middle is O(n)
             Slicing is performed over a range of elements and is O(k) such that k<n 
-        
     
+    STACK:
+        -Last in first out
+        -its a way of storing item, that uses push and pop to insert and delete items
+        -push, pop, peek, is empty = these 4 operations all use O(1)
+        -most common stack problem is bracket matching
+        -if interviewer mentione undo, reverse, previous state, stack will be used
+        -in python a simple list also works like stack where append() can add and pop() can remove
+        -so stack can be a list or a specific class as well that we make
+        -make sure to always used is_empty() when performing pop(), checking whether the stack even has elements is essential during interviews
+    
+    QUEUE:
+        -first is first out
+        -adding element onto a queue results in the element appending to the back, this is called enqueue
+        -removing element from queue is removing from front, this is called deque
+        -during interview, order(like at a cafe)/printing, will mean that they are expecting queue
+        Priority queue = prioritises more important stuff, uses heap
+
+

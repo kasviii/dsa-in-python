@@ -159,4 +159,135 @@ names=["amax","amax","neru","neru","gulu","zodi","zodi"]
 k = clean_list(names)
 print(k, names[:k])
 
-#sliding window
+#tiny thing to remember, f string in print
+name = "Kasvi"
+age = 21
+#without f
+print("My name is", name, "and I am", age)
+#with f
+print(f"My name is {name} and I am {age}")
+
+#sliding window example
+""" the example is that we have chocolates of different prizes, but we can only choose three consecutively laid out options
+so we compare sums of each three group, to get the most expensive group possible"""
+def best_sum(prices, window_size):
+    current_total = sum ( prices[0 : window_size])
+    best_total = current_total
+    print(f"window 1: {prices[0:window_size]}={current_total}")
+
+    for i in range(window_size, len(prices)):
+        left_choco = prices[i-window_size]
+        right_choco = prices[i]
+
+        current_total = current_total-left_choco+right_choco
+        window = prices[i - window_size + 1 : i + 1]#so this gives something like 3-3+1:3+1 which is prices[1:4]
+        print(f"window : {window} = {current_total}")
+
+        if current_total>best_total:
+            best_total = current_total
+    return best_total
+        
+prices = [2,4,6,1,7,3,5]
+answer = best_sum(prices,3)
+print("Best total", answer)
+
+##Stack
+#list way
+stack = []
+
+stack.append("a")
+stack.append("b")
+stack.append("c")
+print(stack)
+print("top item", stack[-1])
+item = stack.pop()
+print("popped", item)
+print(stack)
+
+print(len(stack) == 0)
+"""when we accessed the top element, we could've just as easily written 2 or anything else
+and recieved that element, so list can be used as a stack but isn't the right way always, as
+in a stack one can only interact with last inserted item or the item on top, and not the rest"""
+
+#class method, better way
+
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if self.is_empty():
+            return None
+        return self.items.pop()
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        return self.items[-1]
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+    def display(self):
+        print("Stack(top>bottom):", self.items[::-1])
+
+s = Stack()
+s.push(10)
+s.push(24)
+s.push(34)
+
+print("After pushing")
+s.display()
+
+print("top element", s.peek())
+print("popped element", s.pop())
+print("After popping")
+s.display()
+print("stack size:", s.size())
+print("Is stack empty:", s.is_empty())
+
+
+##Queue
+#way 1
+queuee = []
+#enqueue
+queuee.append("R")
+queuee.append("M")
+queuee.append("H")
+print(queuee)
+#dequeue
+first = queuee.pop(0)
+print(first)
+print(queuee)
+
+#way 2
+"""
+double ended queue
+o(1)
+"""
+from collections import deque
+queue = deque()
+queue.append("N")
+queue.append("R")
+queue.append("O")
+queue.append("P")
+print(queue)
+
+first = queue.popleft()
+print(first)
+print(queue)
+
+print("the new first element:", queue[0])#to look at the first element
+print("size of queue:", len(queue))#to get size of queue
+print("is queue empty?", len(queue)== 0)
+
+#Priority queue
+
+
+
