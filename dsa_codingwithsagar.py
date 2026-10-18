@@ -279,7 +279,7 @@ queue.append("O")
 queue.append("P")
 print(queue)
 
-first = queue.popleft()
+first = queue.popleft()#O(1)
 print(first)
 print(queue)
 
@@ -288,6 +288,49 @@ print("size of queue:", len(queue))#to get size of queue
 print("is queue empty?", len(queue)== 0)
 
 #Priority queue
+import heapq
+hospital = []
+#lower number = higher priority
+# heapq.heappush(queue, item)
+heapq.heappush(hospital, (3,"Broken nose"))
+heapq.heappush(hospital, (1,"stroke"))
+heapq.heappush(hospital, (2,"concussion"))
+print(heapq.heappop(hospital))
+print(heapq.heappop(hospital))
+print(heapq.heappop(hospital))
 
+#DICTIONARY(has keys and values)
+users = {}
+#insert
+users["qwe@gmail.com"] = "wer"
+users["priya@gmail.com"] = "pri"
+users["asd@gmail.com"] = "ert"
 
+print(users)
+print(users["qwe@gmail.com"])#takes only O(1) to find
+print("ravi@gmail.com" in users)
+
+users["priya@gmail.com"] = "priya"#therefore dict can be updated
+del users["qwe@gmail.com"]
+print(users)
+print(users.keys())
+print(users.values())
+print(users.items())
+
+#SET(has keys but no values)(stores all unique values)
+online_users = set()
+online_users.add("qw")
+online_users.add("io")
+online_users.add("mk")
+online_users.add("qw")#duplicate entry
+print(online_users)
+print("qw" in online_users)
+
+print(hash("priya@gmail.com"))
+
+#common hashing que : frequency count
+todays_orders = [
+    "biryani","dosa","biryani","burger","dosa",
+    "biryani","burger","dosa","biryani"
+]
 

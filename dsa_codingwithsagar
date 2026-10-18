@@ -41,5 +41,17 @@ LINEAR DATA STRUCTURE:
         -removing element from queue is removing from front, this is called deque
         -during interview, order(like at a cafe)/printing, will mean that they are expecting queue
         Priority queue = prioritises more important stuff, uses heap
+        -for deque always use from collections import deque coz its O(1), also used by BFS
 
+HASHING:its a technique and hash table is a DS made using this technique
+-Suppose we have a database of a million users, so a basic method of finding a desired user would be to just
+go through the entire database comparing it with target till it hits- extrememly inefficient
+-instead in hashing, while storing itself we store in a sorted organized way which allows us to find a desired
+element with ease when we perform any operation later, instead of having to go through it and figure out
+-suppose we store the email wert@gmail.com so while storing we count its char, which 14%10= 4 and put this mail in box 4,
+which is useful while searching coz we dont have to go through any of the rest of the boxes
+-so we have hash table(key value pair) and hash function(converts data into number)
+-dict and set are data structure that use hash table internally but hash() is a built in hash function
 
+~>Collision: two keys want the same box, python resolves this automatically, it assigns one of them a different place and 
+remembers for lookup later, this is what dict handles for us internally in python
