@@ -55,3 +55,15 @@ which is useful while searching coz we dont have to go through any of the rest o
 
 ~>Collision: two keys want the same box, python resolves this automatically, it assigns one of them a different place and 
 remembers for lookup later, this is what dict handles for us internally in python
+
+**note: if interviewer asks how to make a specific code faster, we have to convert list to dict or set
+
+RECURSION:
+Set a base case codition, sets what happens when the function stops w/o this, maximum recursion depth gets exceeded, i.e. our functions doesnt stop and
+recursive case, defines what is to be done in every resursion whether a count is to be +/-1, or to print something, etc
+
+ALGORITHMS
+1)Searching:
+    linear->O(n)
+    binary(needs sorted lists)->O(logn)
+    

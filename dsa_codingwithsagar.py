@@ -334,3 +334,64 @@ todays_orders = [
     "biryani","burger","dosa","biryani"
 ]
 
+def count_orders(orders):
+    freq={}
+    for dish in orders:
+        if dish in freq:
+            freq[dish] += 1
+        else:
+            freq[dish] = 1
+    return freq
+result = count_orders(todays_orders)
+print(result)
+
+#duplicate question
+signups = ["ravi@gmail.com","vi@gmail.com","ravi@gmail.com",
+"vi@gmail.com","snvi@gmail.com","ravi@gmail.com","wevi@gmail.com"]
+
+def remove_dup(emails):
+    seen = set()
+    unique = []
+
+    for email in emails:
+        if email not in seen:
+            unique.append(email)
+            seen.add(email)
+    return unique
+
+clean = remove_dup(signups)
+print(clean)
+
+"""writing this coz i had this cofusion while writing notes, why cant we just use set directly since set only keeps
+keeps unique values, we can, the only difference is that the other code preserves the order in which the elements 
+entered the list/set/whatever, so the code below which directly using set, is just as applicable"""
+def remove_dup(emails):
+    return list(set(emails))#converted to list coz it Keeps elements in a sequence and supports indexing, like result[0], dont have to tho, can leave as set too
+
+print(remove_dup(signups))
+
+##RECURSION
+#eg 1
+def eat(count):
+    if count == 0:
+        print("Hand is empty. Done")
+        return
+    print(f"I have {count} mangoes, I am eating one now")
+    eat(count - 1)
+eat(3)
+
+#eg2
+def factorial(n):
+    if n == 1:
+        return 1
+    return n*factorial(n-1)
+print(factorial(3))
+
+#eg3
+def fibo(n):
+    if n == 1 or n == 2:
+        return 1
+    return fibo(n-1)+fibo(n-2)
+print(fibo(6))
+
+#Searching:
