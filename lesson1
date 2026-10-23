@@ -18,4 +18,3 @@ different cases:number query occurs in middles of list
 
     theres a basic solution to begin with, which fails for an empty list 
     in script i have listed the different test cases appended in a dictionary
-

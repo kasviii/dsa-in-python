@@ -1,0 +1,25 @@
+
+DS=> linear   vs non linear
+    array      | Graph
+    linked list| Tree
+    stacks
+    queues
+    hashing
+
+
+1)ARRAY
+-Linear ds used to store multiple items of same type in continuous memory location
+-disadvantage-fixed size in most languages (altho python has dynamic allocation)
+             -homogeneous, hance lack of flexibility(can be solved using referrential array)
+             **A referential array is an array that stores memory addresses (references or pointers) to objects, rather than storing the actual data objects themselves side by side in memory
+
+2)LINKED LIST
+-its a collection of nodes, nodes have data and address of next node, first node is head and last is tail which has null for address
+-stores data in non continous locations
+
+difference b/w array and LL => array needs continous free m/m while LL does not
+
+3)STACK
+-uses LIFO
+-ds that is open ended from one side and closed from the other and all operations happen from top
+-possible operations are push, pop, peek, isempty, size

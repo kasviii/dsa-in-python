@@ -395,3 +395,122 @@ def fibo(n):
 print(fibo(6))
 
 #Searching:
+#linear
+def linear_search(nums, target):
+    for i in range(len(nums)):
+        if nums[i] == target:
+            return i
+    return -1
+
+nums = [23,34,32,45,12,453,89]
+print(linear_search(nums, 45))
+
+#Binary
+def binaryy(nums, target):
+    left = 0
+    right = len(nums)-1
+    while left <= right:
+        mid = (left+right)//2
+        if nums[mid]==target:
+            return mid
+        elif nums[mid] < target:
+            left = mid+1
+        else:
+            right = mid-1
+        return -1
+
+nums = [23,34,32,45,12,453,89]
+print(binaryy(nums, 45))
+#Searching:
+#bubble sort
+def bubble_sort(prices):
+    n=len(prices)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if prices[j]>prices[j+1]:
+                prices[j], prices[j+1] = prices[j+1], prices[j]
+    return prices
+prices = [850, 200, 520, 100, 430]
+print(bubble_sort(prices))
+#selection sort
+def selection(prices):
+    n = len(prices)
+    for i in range(n):
+        min_index = i
+        for j in range(i+1,n):
+            if prices[j]<prices[min_index]:
+                min_index = j
+        prices[i], prices[min_index] = prices[min_index], prices[i]
+    return prices
+prices = [850, 200, 520, 100, 430]
+print(selection(prices))
+#insertion sort
+arr = [7,3,5,2]
+for i in range(1, len(arr)):
+    current = arr[i]
+    j = i-1
+    while j>=0 and arr[j]>current:
+        arr[j+1] = arr[j]
+        j-=1
+    arr[j+1] = current
+print(arr)
+#merge sort
+
+def merge_sort(nums):
+    if len(nums) <= 1:
+        return nums
+
+    middle = len(nums) // 2
+    left_half = nums[:middle]
+    right_half = nums[middle:]
+
+    print(f"Splitting: {nums}")
+
+    sorted_left = merge_sort(left_half)
+    sorted_right = merge_sort(right_half)
+
+    sorted_result = combine(sorted_left, sorted_right)
+    print(f"Merged back: {sorted_result}")
+    return sorted_result
+
+
+def combine(left, right):
+    final_list = []
+    left_pointer = 0
+    right_pointer = 0
+
+    while left_pointer < len(left) and right_pointer < len(right):
+        left_item = left[left_pointer]
+        right_item = right[right_pointer]
+
+        if left_item <= right_item:
+            final_list.append(left_item)
+            left_pointer += 1
+        else:
+            final_list.append(right_item)
+            right_pointer += 1
+
+    final_list += left[left_pointer:]
+    final_list += right[right_pointer:]
+
+    return final_list
+
+
+nums = [850, 200, 520, 100, 430]
+print(merge_sort(nums))
+
+#quick sort
+def quick_sort(numbers):
+    if len(numbers) <= 1:
+        return numbers
+    pivot = numbers[-1]
+    smaller = []
+    bigger = []
+    for number in numbers[:-1]:
+        if number<=pivot:
+            smaller.append(number)
+        else:
+            bigger.append(number)
+    return quick_sort(smaller)+[pivot]+quick_sort(bigger)
+numbers=[850, 200, 520, 100, 430]
+print(quick_sort(numbers))

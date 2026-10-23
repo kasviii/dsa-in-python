@@ -64,6 +64,23 @@ recursive case, defines what is to be done in every resursion whether a count is
 
 ALGORITHMS
 1)Searching:
-    linear->O(n)
+    linear->O(n) for worst case and O(1) for best, can be used for unsorted lists
     binary(needs sorted lists)->O(logn)
+2)Sorting:
+    Bubble:Compares one element with the rest in one pass-> nested loop so O(n^2)
+    Insertion:find the smallest number from the unsorted part, swap it to the front of the unsorted part and then repeat-> nest loop, so O(n^2)
+    Selection:assumes left side is sorted, compares elements and shifts the smaller to front, best O(n), and worst O(n^2)
+    merge sort: divide and conquer, uses recursion
+                    Split the list into halves.
+                    Sort each half recursively.
+                    Merge the halves by repeatedly choosing the smaller front element.
+                ->O(nlogn)
+                ->O(n) extra m/m is used by merge_sort
+                preferred for linked list
+    Quick sort:->Uses O(logn) extar m/m
+               ->O(nlogn), worst case is O(n^2)[WORST CASE is when we take the last value as pivot for an already sorted list, can be solved by taking a random value as pivot or median as pivot]
+               preferred for arrays
+               partition just parts the list into two groups around pivot
+
+
     
