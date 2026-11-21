@@ -1,0 +1,6 @@
+Int = 4 Bytes and 1 Byte=8bits
+Syntax	  Data structure	        Example
+[]	      List (like an array)	    [1, 2, 3]
+set()	  Set (unique values)	    {1, 2, 3}
+{}	  Dictionary (key-value pairs)	{"a": 1, "b": 2}
+()	   Tuple (immutable sequence)	(1, 2, 3)
